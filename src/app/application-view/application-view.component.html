@@ -1,0 +1,15 @@
+<div *ngIf="hideEditView && !displayNewForm">
+  <h1>Details</h1>
+
+  {{applicant.Name}} <br />
+  {{applicant.Email}} <br />
+  {{applicant.PhoneNumber}} <br />
+  {{applicant.Experience}} <br />
+  <br />
+
+  <button (click)="showEditForm()">Edit Details</button>
+  <button (click)="deleteFormData()">Delete Details</button>
+</div>
+<app-root *ngIf="!hideEditView" [applicant]="applicantToEdit"></app-root>
+<app-root *ngIf="displayNewForm"></app-root>
+
